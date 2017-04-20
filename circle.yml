@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+  override:
+    - docker info
+    - if [ -e ~/docker/image.tar ]; then docker load --input ~/docker/image.tar; fi
+    - docker build -t yamaszone/phantomjs:latest .
+    - mkdir -p ~/docker; docker save yamaszone/phantomjs:latest > ~/docker/image.tar
+
+test:
+  override:
+    - docker run --rm yamaszone/phantomjs:latest --version
+    - ./run setup-test-framework
+    - ./run configure-bats-assert
+    - bats tests/
+

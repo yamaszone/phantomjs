@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DOCKER_IMAGE=yamaszone/phantomjs:latest
+
+docker run -it --rm $DOCKER_IMAGE "$@"
