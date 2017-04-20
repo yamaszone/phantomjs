@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/yamaszone/phantomjs/tree/master.svg?style=svg)](https://circleci.com/gh/yamaszone/phantomjs/tree/master)
+[![CircleCI](https://circleci.com/gh/yamaszone/phantomjs.svg?style=svg)](https://circleci.com/gh/yamaszone/phantomjs)
 
 # PhantomJS Docker Container
 Minimal [PhantomJS](https://github.com/ariya/phantomjs) Docker container using official [Node](https://hub.docker.com/_/node/) base.
